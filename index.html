@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="src/assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="src/style/style.css" />
+    <script src="src/js/script.js" defer></script>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <main>
+      <section id="card-form" class="card card--form">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="src/assets/images/illustration-sign-up-desktop.svg"
+          />
+          <source
+            media="(min-width: 530px)"
+            srcset="src/assets/images/illustration-sign-up-tablet.svg"
+          />
+          <img
+            class="card__image"
+            src="src/assets/images/illustration-sign-up-mobile.svg"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="card__content">
+          <div class="card__header">
+            <h1 class="card__title">Stay updated!</h1>
+            <p class="card__description">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+          </div>
+          <ul class="card__list">
+            <li class="card__item">
+              <img src="src/assets/images/icon-list.svg" alt="" />
+              <p>Product discovery and building what matters</p>
+            </li>
+            <li class="card__item">
+              <img src="src/assets/images/icon-list.svg" alt="" />
+              <p>Measuring to ensure updates are a success</p>
+            </li>
+            <li class="card__item">
+              <img src="src/assets/images/icon-list.svg" alt="" />
+              <p>And much more!</p>
+            </li>
+          </ul>
+          <form id="newsletter-form" class="card__form" action="#" method="get">
+            <div>
+              <div class="input__label">
+                <label for="Email">Email address</label>
+                <span id="error-message" aria-live="polite"></span>
+              </div>
+              <input
+                class="card__input"
+                type="email"
+                name="Email"
+                id="email-input"
+                placeholder="email@company.com"
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$"
+                required
+              />
+            </div>
+            <button class="card__button" type="submit">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section
+        id="card-message"
+        class="card card__message card--hidden"
+        aria-hidden="true"
+      >
+        <div class="card__content">
+          <div>
+            <img
+              src="src/assets/images/icon-success.svg"
+              aria-hidden="true"
+              loading="lazy"
+              width="64"
+              height="64"
+            />
+            <h2 class="card__title">Thanks for subscribing!</h2>
+            <p class="card__description">
+              A confirmation email has been sent to
+              <strong id="sendToMail-message"></strong> Please open it and click
+              the button inside to confirm your subscription.
+            </p>
+          </div>
+          <button id="dismiss-button" class="card__button" type="button">
+            Dismiss message
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
