@@ -158,6 +158,10 @@ main {
     justify-content: center;
   }
 
+  .card__image {
+    padding: 16px;
+  }
+
   .card__message {
     max-width: 350px;
   }
